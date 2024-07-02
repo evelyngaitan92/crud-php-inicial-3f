@@ -47,8 +47,8 @@ if (isset($_POST['login'])) {
     <?php if (isset($_GET['mensaje'])) { ?>
       <span><?= $_GET['mensaje'] ?></span>
     <?php } ?>
-    <h1>Ingresa tu Usuario y contraseña</h1>
       <form action="login.php" class= "formularios" method="POST" class= "formularios">
+        <h1>Ingresa tu Usuario y contraseña</h1>
         <input type="text" name="nombreusuario" id="" placeholder="Ingrese el usuario">
         <input type="password" name="contraseña" id="" placeholder="Ingrese su contraseña">
         <input type="submit" value="Ingresar" class="boton">
