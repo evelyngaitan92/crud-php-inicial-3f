@@ -23,7 +23,7 @@
   <span>Hola, <?=  $_SESSION['usuario_nombre'] ?></span>
   <a href="logout.php"><button class="boton">Cerrar Sesión</button></a>
   <div class= "tabla-usuarios">
-    <h2>Usuarios Registrados</h2>
+    <h1 id="titulo-index">Usuarios Registrados</h1>
     <table>
       <thead>
         <tr>

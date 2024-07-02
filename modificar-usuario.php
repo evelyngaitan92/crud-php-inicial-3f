@@ -51,5 +51,5 @@
           <input type="hidden" name="id" value="<?= $id?>">
           <input type="hidden" name="modificar-usuario" value="yes">
           <input type="submit" value="Modificar usuario" class="boton">
-          <a href="index.php"><button class="boton">Volver a Inicio</button></a>
         </form>
+        <a href="index.php"><button class="boton">Volver a Inicio</button></a>
