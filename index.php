@@ -19,15 +19,6 @@ $query = mysqli_query($con, $sql);
 </head>
 
 <body>
-  <?php if (isset($_GET['borrado'])) { ?>
-    <span>USUARIO ID <?= $_GET['borrado'] ?> BORRADO EXITOSAMENTE</span>
-  <?php } ?>
-  <?php if (isset($_GET['creado'])) { ?>
-    <span>USUARIO "<?= $_GET['creado'] ?>" CREADO EXITOSAMENTE</span>
-  <?php } ?>
-  <?php if (isset($_GET['modificado'])) { ?>
-    <span>EL USUARIO "<?= $_GET['modificado'] ?>" MODIFICADO EXITOSAMENTE</span>
-  <?php } ?>
   <div class= "tabla-usuarios">
     <h2>Usuarios Registrados</h2>
     <table>
@@ -82,6 +73,15 @@ $query = mysqli_query($con, $sql);
   <div>
     <a href="crear-usuario.php"> <button>Crear Usuario</button></a>
   </div>
+      <?php if (isset($_GET['borrado'])) { ?>
+        <span>USUARIO ID <?= $_GET['borrado'] ?> BORRADO EXITOSAMENTE</span>
+      <?php } ?>
+      <?php if (isset($_GET['creado'])) { ?>
+        <span>USUARIO "<?= $_GET['creado'] ?>" CREADO EXITOSAMENTE</span>
+      <?php } ?>
+      <?php if (isset($_GET['modificado'])) { ?>
+        <span>EL USUARIO "<?= $_GET['modificado'] ?>" MODIFICADO EXITOSAMENTE</span>
+      <?php } ?>
 </body>
 
 </html>

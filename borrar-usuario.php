@@ -12,6 +12,6 @@
   // if ($result) {
   //   echo "Usuario borrado - ID: " . $id;
   // } else {
-    Header("Location: index.php?borrado=" . $id);
+    Header("Location: index.php?borrado=" . $nombreusuario);
   // }
 ?>

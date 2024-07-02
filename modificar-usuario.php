@@ -1,6 +1,7 @@
 <head>
   <link href="style.css" rel="stylesheet">
 </head>
+
 <?php
     include ("conexion.php");
     $conexion = conexion();
@@ -52,5 +53,6 @@
           <input type="hidden" name="id" value="<?= $id?>">
           <input type="hidden" name="modificar-usuario" value="yes">
           <input type="submit" value="Modificar usuario">
+          <a href="index.php"><button>Volver a Inicio</button></a>
         </form>
       </div>
