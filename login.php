@@ -47,12 +47,22 @@ if (isset($_POST['login'])) {
     <?php if (isset($_GET['mensaje'])) { ?>
       <span><?= $_GET['mensaje'] ?></span>
     <?php } ?>
-    <form action="login.php" class= "form-usuarios" method="POST">
-      <input type="text" name="nombreusuario" id="" placeholder="Ingrese el usuario">
-      <input type="password" name="contraseña" id="" placeholder="Ingrese su contraseña">
-      <input type="submit" value="Ingresar">
-      <input type="hidden" name="login" value="yes">
-    </form>
+    <h1>Ingresa tu Usuario y contraseña</h1>
+    <div>
+      <form action="login.php" class= "form-usuarios" method="POST">
+        <input type="text" name="nombreusuario" id="" placeholder="Ingrese el usuario">
+        <input type="password" name="contraseña" id="" placeholder="Ingrese su contraseña">
+        <input type="submit" value="Ingresar">
+        <input type="hidden" name="login" value="yes">
+      </form>
+    </div>
+    <div>
+      <p>Si aun no estas registrado crea un usuario para acceder 
+        <a href="crear-usuario.php"> 
+          <button>Crea tu usuario</button></a>
+      </p>
+    </div>
+      
     
   </body>
 </html>
