@@ -38,9 +38,7 @@
       extract($row);
     }
     ?>
-
-    <div class= "form-usuarios"> <!--form de altas de usuario-->
-        <form action="modificar-usuario.php" method="POST">
+        <form action="modificar-usuario.php" method="POST" class= "formularios">
           <h1>Modicar datos de usuario</h1>
           <input type="text" name="nombre" placeholder="Ingresa tu nombre" value="<?= $nombre?>">
           <input type="text" name="apellido" placeholder="Ingresa tu apellido"  value="<?= $apellido?>">
@@ -55,4 +53,3 @@
           <input type="submit" value="Modificar usuario">
           <a href="index.php"><button>Volver a Inicio</button></a>
         </form>
-      </div>

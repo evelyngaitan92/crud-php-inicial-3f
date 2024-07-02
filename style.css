@@ -13,20 +13,13 @@ a{
   text-decoration: none;
 }
 
-.form-usuarios form{
+.formularios{
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 30%;
   margin: 20px auto;
   text-align: center;
-}
-
-.form-usuarios form input{
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.form-usuarios form {
   padding: 8px;
   border:2px solid #aaa;
   border-radius:4px;
@@ -34,14 +27,14 @@ a{
   transition:.3s;
 }
 
-.form-usuarios form input:focus,
-.form-usuarios form:focus,
-.form-usuarios form:focus{
+.formularios input:focus,
+.formularios:focus,
+.formularios:focus{
   border-color:rgb(255, 30, 199);
   box-shadow:0 0 6px 0 rgb(244, 36, 233);
 }
 
-.form-usuarios form {
+.formularios {
   border: none;
   padding: 12px 50px;
   text-decoration: none;
@@ -53,7 +46,7 @@ a{
   border: 2px solid #60a100;
 }
 
-.form-usuarios form input[type=submit]:hover {
+.formularios form input[type=submit]:hover {
   background-color: #60a100;
   color: white;
 }
@@ -73,10 +66,13 @@ table tr {
   padding: 4px;
 }
 
-table th{
+table tr,
+table td,
+table th {
   padding: 16px;
   text-align: center;
   font-size: .85em;
+  margin: 10px;
 }
 
 .tabla-usuarios--edit{
