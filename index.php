@@ -74,13 +74,13 @@ $query = mysqli_query($con, $sql);
     <a href="crear-usuario.php"> <button>Crear Usuario</button></a>
   </div>
       <?php if (isset($_GET['borrado'])) { ?>
-        <span>USUARIO ID <?= $_GET['borrado'] ?> BORRADO EXITOSAMENTE</span>
+        <span>USUARIO BORRADO EXITOSAMENTE</span>
       <?php } ?>
       <?php if (isset($_GET['creado'])) { ?>
-        <span>USUARIO "<?= $_GET['creado'] ?>" CREADO EXITOSAMENTE</span>
+        <span>USUARIO CREADO EXITOSAMENTE</span>
       <?php } ?>
       <?php if (isset($_GET['modificado'])) { ?>
-        <span>EL USUARIO "<?= $_GET['modificado'] ?>" MODIFICADO EXITOSAMENTE</span>
+        <span>USUARIO MODIFICADO EXITOSAMENTE</span>
       <?php } ?>
 </body>
 
