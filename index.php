@@ -1,12 +1,13 @@
-<!--Coneccion con la BD exemplo
-include("connection.php");
-$con = connection();
+<?php //validación de usuario 
+  session_name('back');
+  session_start();
 
-$sql = "SELECT * FROM users";
-$query = mysqli_query($con, $sql);
--->
+  if (!isset($_SESSION['is_logged'])) {
+    header('location: login.php');
+    exit();
+  } 
 
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +20,8 @@ $query = mysqli_query($con, $sql);
 </head>
 
 <body>
+  <span>Hola, <?=  $_SESSION['usuario_nombre'] ?></span>
+  <a href="logout.php"><button>Cerrar Sesión</button></a>
   <div class= "tabla-usuarios">
     <h2>Usuarios Registrados</h2>
     <table>
