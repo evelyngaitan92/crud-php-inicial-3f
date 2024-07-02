@@ -51,13 +51,13 @@ if (isset($_POST['login'])) {
       <form action="login.php" class= "form-usuarios" method="POST" class= "formularios">
         <input type="text" name="nombreusuario" id="" placeholder="Ingrese el usuario">
         <input type="password" name="contraseña" id="" placeholder="Ingrese su contraseña">
-        <input type="submit" value="Ingresar">
+        <input type="submit" value="Ingresar" class="boton">
         <input type="hidden" name="login" value="yes">
       </form>
     <div>
       <p>Si aun no estas registrado crea un usuario para acceder 
         <a href="crear-usuario.php"> 
-          <button>Crea tu usuario</button></a>
+          <button class="boton">Crea tu usuario</button></a>
       </p>
     </div>
       

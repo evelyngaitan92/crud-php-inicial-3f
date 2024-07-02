@@ -21,7 +21,7 @@
 
 <body>
   <span>Hola, <?=  $_SESSION['usuario_nombre'] ?></span>
-  <a href="logout.php"><button>Cerrar Sesión</button></a>
+  <a href="logout.php"><button class="boton">Cerrar Sesión</button></a>
   <div class= "tabla-usuarios">
     <h2>Usuarios Registrados</h2>
     <table>
@@ -59,13 +59,13 @@
         <td>
          <form action="modificar-usuario.php" method="POST">
             <input type="hidden" name="id" value="<?= $row['ID'] ?>">
-            <input type="submit" value="Modificar">
+            <input type="submit" value="Modificar" class="boton">
           </form>  
         <td>
           <form action="borrar-usuario.php" method="POST">
             <input type="hidden" name="borrar-usuario" value="yes">
             <input type="hidden" name="id" value="<?= $row['ID'] ?>">
-            <input type="submit" value="Borrar">
+            <input type="submit" value="Borrar" class="boton">
           </form>  
         </td>
        </tr>
@@ -74,7 +74,7 @@
     </table>
   </div>
   <div>
-    <a href="crear-usuario.php"> <button>Crear Usuario</button></a>
+    <a href="crear-usuario.php"> <button class="boton" >Crear Usuario</button></a>
   </div>
       <?php if (isset($_GET['borrado'])) { ?>
         <span>USUARIO BORRADO EXITOSAMENTE</span>

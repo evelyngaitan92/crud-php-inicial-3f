@@ -13,6 +13,15 @@ a{
   text-decoration: none;
 }
 
+.boton{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 12px;
+}
+
 .formularios{
   display: flex;
   flex-direction: column;
@@ -28,19 +37,6 @@ a{
   text-decoration: none;
   background-color: white; 
   color: black; 
-}
-
-.formularios input:focus,
-.formularios:focus,
-.formularios:focus{
-  border-color:rgb(255, 30, 199);
-  box-shadow:0 0 6px 0 rgb(244, 36, 233);
-}
-
-
-.formularios form input[type=submit]:hover {
-  background-color: #60a100;
-  color: white;
 }
 
 .tabla-usuarios table{
@@ -63,7 +59,7 @@ table td,
 table th {
   padding: 16px;
   text-align: center;
-  font-size: .85em;
+  font-size: .95em;
   margin: 10px;
 }
 

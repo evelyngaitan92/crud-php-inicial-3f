@@ -50,6 +50,6 @@
           <input type="hidden" name="nombreusuario" value="<?= $nombreusuario?>">
           <input type="hidden" name="id" value="<?= $id?>">
           <input type="hidden" name="modificar-usuario" value="yes">
-          <input type="submit" value="Modificar usuario">
-          <a href="index.php"><button>Volver a Inicio</button></a>
+          <input type="submit" value="Modificar usuario" class="boton">
+          <a href="index.php"><button class="boton">Volver a Inicio</button></a>
         </form>

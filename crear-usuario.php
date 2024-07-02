@@ -32,5 +32,5 @@
       <input type="hidden" name="crear-usuario" value="yes">
       <input type="submit" value="Crea tu usuario">
     </form>
-    <a href="index.php"><button>Volver al Inicio</button></a>
+    <a href="index.php"><button class="boton" >Volver al Inicio</button></a>
  
