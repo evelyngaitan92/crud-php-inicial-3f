@@ -5,12 +5,6 @@ $con = connection();
 $sql = "SELECT * FROM users";
 $query = mysqli_query($con, $sql);
 -->
- <?php 
-include("conexion.php");
-$conexion= conexion();
-$db= "select * from users";
-$query= mysqli_query($conexion, $db);
-?>
 
 
 
@@ -25,25 +19,15 @@ $query= mysqli_query($conexion, $db);
 </head>
 
 <body>
-  <div class= "form-usuarios"> <!--form de altas de usuario-->
-    <form action="crear-usuario.php" method="POST">
-      <h1>Altas de usuario</h1>
-      <input type="text" name="nombre" placeholder="Ingresa tu nombre">
-      <input type="text" name="apellido" placeholder="Ingresa tu apellido">
-      <input type="number" name="edad" placeholder="Ingresa tu edad">
-      <input type="email" name="email" placeholder="Ingresa tu e-mail">
-      <input type="text" name="nombreusuario" placeholder="Ingresa tu nombre de usuario" >
-      <input type="password" name="contraseña" placeholder="Crea aqui tu contraseña">
-
-      <input type="hidden" name="crear-usuario" value="yes">
-      <input type="submit" value="Crea tu usuario">
-    </form>
-  </div>
-
   <?php if (isset($_GET['borrado'])) { ?>
-    <span>USUARIO BORRADO: <?= $_GET['borrado'] ?></span>
+    <span>USUARIO ID <?= $_GET['borrado'] ?> BORRADO EXITOSAMENTE</span>
   <?php } ?>
-
+  <?php if (isset($_GET['creado'])) { ?>
+    <span>USUARIO "<?= $_GET['creado'] ?>" CREADO EXITOSAMENTE</span>
+  <?php } ?>
+  <?php if (isset($_GET['modificado'])) { ?>
+    <span>EL USUARIO "<?= $_GET['modificado'] ?>" MODIFICADO EXITOSAMENTE</span>
+  <?php } ?>
   <div class= "tabla-usuarios">
     <h2>Usuarios Registrados</h2>
     <table>
@@ -61,7 +45,14 @@ $query= mysqli_query($conexion, $db);
         </tr>
       </thead>
       <tbody> 
-      <?php while($row= mysqli_fetch_array($query)):?>
+        
+      <?php 
+        include("conexion.php");
+        $conexion = conexion();
+        $query = "SELECT * FROM users";
+        $results = mysqli_query($conexion, $query);
+      ?>
+      <?php while($row= mysqli_fetch_array($results)):?>
        <tr> 
         <td><?= $row['ID'] ?></td>
         <td><?= $row['nombre'] ?></td>
@@ -71,7 +62,11 @@ $query= mysqli_query($conexion, $db);
         <td><?= $row['nombreusuario'] ?></td>
         <td><?= $row['contraseña'] ?></td>
 
-        <td><a href="modificaciones.php">Editar</a></td>
+        <td>
+         <form action="modificar-usuario.php" method="POST">
+            <input type="hidden" name="id" value="<?= $row['ID'] ?>">
+            <input type="submit" value="Modificar">
+          </form>  
         <td>
           <form action="borrar-usuario.php" method="POST">
             <input type="hidden" name="borrar-usuario" value="yes">
@@ -83,6 +78,9 @@ $query= mysqli_query($conexion, $db);
       <?php endwhile; ?>
     </tbody> 
     </table>
+  </div>
+  <div>
+    <a href="crear-usuario.php"> <button>Crear Usuario</button></a>
   </div>
 </body>
 
