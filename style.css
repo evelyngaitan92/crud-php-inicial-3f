@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+.form-usuarios form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 30%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.form-usuarios form input{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-usuarios form {
+  padding: 8px;
+  border:2px solid #aaa;
+  border-radius:4px;
+  outline:none;
+  transition:.3s;
+}
+
+.form-usuarios form input:focus,
+.form-usuarios form:focus,
+.form-usuarios form:focus{
+  border-color:rgb(255, 30, 199);
+  box-shadow:0 0 6px 0 rgb(244, 36, 233);
+}
+
+.form-usuarios form {
+  border: none;
+  padding: 12px 50px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #60a100;
+}
+
+.form-usuarios form input[type=submit]:hover {
+  background-color: #60a100;
+  color: white;
+}
+
+.tabla-usuarios table{
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table th{
+  padding: 16px;
+  text-align: center;
+  font-size: .85em;
+}
+
+.tabla-usuarios--edit{
+  background: #009688;
+  padding: 6px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+.tabla-usuarios--delete{
+  background: #b11e1e;
+  padding: 6px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
